@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "contactPage",
-  title: "Contact Page",
+  name: "cartPage",
+  title: "Cart Page",
   type: "document",
   fields: [
     {
@@ -23,28 +23,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "notification",
-      title: "Notification",
-      type: "object",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "desc",
-          title: "Description",
-          type: "array",
-          of: [{ type: "block" }],
-        },
-      ],
-    },
-    {
       name: "collapsible",
       title: "Collapsible",
       type: "collapsible",
-      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "homePage",
-  title: "Home Page",
+  name: "hennaServicePage",
+  title: "HennaService Page",
   type: "document",
   fields: [
     {
@@ -23,45 +23,30 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "homeHero",
-      title: "Home Hero",
-      type: "reference",
-      to: { type: "homeHero" },
+      name: "hero",
+      title: "Hero",
+      type: "hero",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "services",
-      title: "Services",
+      name: "tarifText",
+      title: "Tarif Text",
       type: "array",
-      of: [{ type: "reference", to: { type: "display" } }],
+      of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "works",
-      title: "Works",
+      name: "pricePlans",
+      title: "Price Plans",
       type: "array",
-      of: [{ type: "reference", to: { type: "workPage" } }],
+      of: [{ type: "pricePlan" }],
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "history",
-      title: "History",
-      type: "reference",
-      to: { type: "history" },
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "reviews",
-      title: "Reviews",
+      name: "multiDescriptions",
+      title: "Multi Descriptions",
       type: "array",
-      of: [{ type: "review" }],
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "bigCTA",
-      title: "Big CTA",
-      type: "reference",
-      to: { type: "bigCTA" },
+      of: [{ type: "description" }],
       validation: (Rule) => Rule.required(),
     },
   ],

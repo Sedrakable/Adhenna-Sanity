@@ -1,21 +1,20 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "localLink",
-  title: "Local Link",
+  name: "review",
+  title: "Review",
   type: "object",
   fields: [
     {
-      name: "text",
-      title: "Text",
+      name: "name",
+      title: "Name",
       type: "string",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "link",
-      title: "Link",
-      type: "array",
-      of: [{ type: "localPath" }],
+      name: "message",
+      title: "Message",
+      type: "text",
       validation: (Rule) => Rule.required(),
     },
   ],

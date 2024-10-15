@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "contactPage",
-  title: "Contact Page",
+  name: "workPage",
+  title: "Work Page",
   type: "document",
   fields: [
     {
@@ -23,33 +23,34 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "notification",
-      title: "Notification",
-      type: "object",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "desc",
-          title: "Description",
-          type: "array",
-          of: [{ type: "block" }],
-        },
-      ],
+      name: "path",
+      title: "Path",
+      type: "localPath",
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: "collapsible",
-      title: "Collapsible",
-      type: "collapsible",
+      name: "reserve",
+      title: "Reserve",
+      type: "boolean",
+    },
+    {
+      name: "hero",
+      title: "Hero",
+      type: "hero",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "work",
+      title: "Work",
+      type: "reference",
+      to: { type: "work" },
       validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
     select: {
       title: "hiddenTitle",
+      media: "image.image",
     },
   },
 });

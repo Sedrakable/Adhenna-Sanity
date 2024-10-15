@@ -17,10 +17,5 @@ export default defineType({
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: "part3",
-      title: "Part 3",
-      type: "string",
-    }),
   ],
 });

@@ -1,10 +1,16 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "process",
-  title: "Process",
+  name: "bigCTA",
+  title: "Big CTA",
   type: "document",
   fields: [
+    {
+      name: "hiddenTitle",
+      title: "Hidden Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
     {
       name: "title",
       title: "Title",
@@ -12,24 +18,16 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "desc",
-      title: "Description",
-      type: "text",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "features",
-      title: "Features",
-      type: "array",
-      of: [{ type: "reference", to: { type: "feature" } }],
+      name: "backgroundImage",
+      title: "Background Image",
+      type: "customImage",
       validation: (Rule) => Rule.required(),
     },
   ],
-
   preview: {
     select: {
-      title: "title",
-      media: "customImage.image",
+      title: "hiddenTitle",
+      media: "backgroundImage.image",
     },
   },
 });

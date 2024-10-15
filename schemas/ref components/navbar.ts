@@ -12,30 +12,6 @@ export default defineType({
       type: "language",
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: "links",
-      title: "links",
-      type: "array",
-      of: [
-        {
-          type: "localLink",
-          // This handles single Cta references
-        },
-        {
-          type: "object", // This handles arrays of Cta references
-          fields: [
-            { name: "title", title: "Title", type: "string" },
-            {
-              name: "ctaArray",
-              title: "Cta Array",
-              type: "array",
-              of: [{ type: "localLink" }],
-            },
-          ],
-        },
-      ],
-      validation: (Rule) => Rule.required(),
-    },
   ],
   preview: commonPreviewConfig("Navbar"),
 });

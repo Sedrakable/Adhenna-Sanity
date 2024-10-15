@@ -10,6 +10,9 @@ export default defineType({
       title: "Image",
       type: "image",
       validation: (Rule) => Rule.required(),
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: "alt",
@@ -21,5 +24,4 @@ export default defineType({
     },
     // Add more fields as needed
   ],
-  validation: (Rule) => Rule.required(),
 });

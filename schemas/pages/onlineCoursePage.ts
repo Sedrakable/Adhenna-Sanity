@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "homePage",
-  title: "Home Page",
+  name: "onlineCoursePage",
+  title: "Online Course Page",
   type: "document",
   fields: [
     {
@@ -23,45 +23,35 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "homeHero",
-      title: "Home Hero",
-      type: "reference",
-      to: { type: "homeHero" },
+      name: "hero",
+      title: "Hero",
+      type: "hero",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "services",
-      title: "Services",
+      name: "desc",
+      title: "Description",
       type: "array",
-      of: [{ type: "reference", to: { type: "display" } }],
+      of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "works",
-      title: "Works",
+      name: "pricePlan",
+      title: "Price Plan",
+      type: "pricePlan",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "video",
+      title: "Video",
+      type: "video",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "features",
+      title: "Features",
       type: "array",
-      of: [{ type: "reference", to: { type: "workPage" } }],
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "history",
-      title: "History",
-      type: "reference",
-      to: { type: "history" },
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "reviews",
-      title: "Reviews",
-      type: "array",
-      of: [{ type: "review" }],
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "bigCTA",
-      title: "Big CTA",
-      type: "reference",
-      to: { type: "bigCTA" },
+      of: [{ type: "display" }],
       validation: (Rule) => Rule.required(),
     },
   ],

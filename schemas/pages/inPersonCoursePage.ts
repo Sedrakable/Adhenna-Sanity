@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "homePage",
-  title: "Home Page",
+  name: "inPersonCoursePage",
+  title: "In Person Course Page",
   type: "document",
   fields: [
     {
@@ -23,38 +23,50 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "homeHero",
-      title: "Home Hero",
-      type: "reference",
-      to: { type: "homeHero" },
+      name: "hero",
+      title: "Hero",
+      type: "hero",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "services",
-      title: "Services",
+      name: "infoText",
+      title: "Info Text",
       type: "array",
-      of: [{ type: "reference", to: { type: "display" } }],
+      of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "works",
-      title: "Works",
+      name: "multiDescriptions",
+      title: "Multi Descriptions",
       type: "array",
-      of: [{ type: "reference", to: { type: "workPage" } }],
+      of: [{ type: "description" }],
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "history",
-      title: "History",
-      type: "reference",
-      to: { type: "history" },
+      name: "image",
+      title: "Image",
+      type: "customImage",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "reviews",
-      title: "Reviews",
+      name: "pricePlans1",
+      title: "Price Plans 1",
       type: "array",
-      of: [{ type: "review" }],
+      of: [{ type: "pricePlan" }],
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "experienceText",
+      title: "Experience Text",
+      type: "array",
+      of: [{ type: "block" }],
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "pricePlans2",
+      title: "Price Plans 2",
+      type: "array",
+      of: [{ type: "pricePlan" }],
       validation: (Rule) => Rule.required(),
     },
     {

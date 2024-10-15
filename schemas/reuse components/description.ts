@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "value",
-  title: "Value",
+  name: "description",
+  title: "Description",
   type: "object",
   fields: [
     {
@@ -15,13 +15,6 @@ export default defineType({
       name: "desc",
       title: "Description",
       type: "text",
-      validation: (Rule) => Rule.required(),
     },
   ],
-
-  preview: {
-    select: {
-      title: "title",
-    },
-  },
 });

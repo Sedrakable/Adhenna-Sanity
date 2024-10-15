@@ -1,26 +1,23 @@
 import { defineType } from "sanity";
+import { heroFields } from "./hero";
 
 export default defineType({
-  name: "featuresBlock",
-  title: "Features Block",
+  name: "display",
+  title: "Display",
   type: "document",
   fields: [
+    ...heroFields,
     {
       name: "hiddenTitle",
       title: "Hidden Title",
       type: "string",
-    },
-    {
-      name: "features",
-      title: "Features",
-      type: "array",
-      of: [{ type: "reference", to: { type: "feature" } }],
       validation: (Rule) => Rule.required(),
     },
   ],
   preview: {
     select: {
       title: "hiddenTitle",
+      media: "backgroundImage.image",
     },
   },
 });

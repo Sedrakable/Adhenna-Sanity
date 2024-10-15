@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "quote",
-  title: "Quote",
+  name: "history",
+  title: "History",
   type: "document",
   fields: [
     {
@@ -11,16 +11,9 @@ export default defineType({
       type: "string",
     },
     {
-      name: "leftText",
-      title: "LeftText",
+      name: "text",
+      title: "Text",
       type: "string",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "rightText",
-      title: "RightText",
-      type: "string",
-      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

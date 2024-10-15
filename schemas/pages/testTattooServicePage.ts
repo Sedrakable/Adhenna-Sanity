@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "aboutPage",
-  title: "About Page",
+  name: "testTattooServicePage",
+  title: "Test Tattoo Service Page",
   type: "document",
   fields: [
     {
@@ -23,24 +23,36 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "about",
-      title: "About",
-      type: "reference",
-      to: { type: "aboutBlock" },
+      name: "hero",
+      title: "Hero",
+      type: "hero",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "values",
-      title: "Values",
-      type: "reference",
-      to: { type: "valuesBlock" },
+      name: "display",
+      title: "Display",
+      type: "display",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "work",
-      title: "Work",
+      name: "desc",
+      title: "Description",
+      type: "array",
+      of: [{ type: "block" }],
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "pricePlans",
+      title: "Price Plans",
+      type: "array",
+      of: [{ type: "pricePlan" }],
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "bigCTA",
+      title: "Big CTA",
       type: "reference",
-      to: { type: "workBlock" },
+      to: { type: "bigCTA" },
       validation: (Rule) => Rule.required(),
     },
   ],

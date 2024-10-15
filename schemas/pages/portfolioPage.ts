@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "homePage",
-  title: "Home Page",
+  name: "portfolioPage",
+  title: "Portfolio Page",
   type: "document",
   fields: [
     {
@@ -23,17 +23,9 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "homeHero",
-      title: "Home Hero",
-      type: "reference",
-      to: { type: "homeHero" },
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "services",
-      title: "Services",
-      type: "array",
-      of: [{ type: "reference", to: { type: "display" } }],
+      name: "hero",
+      title: "Hero",
+      type: "hero",
       validation: (Rule) => Rule.required(),
     },
     {
@@ -51,23 +43,32 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "reviews",
-      title: "Reviews",
-      type: "array",
-      of: [{ type: "review" }],
+      name: "flashFormTitle",
+      title: "Flash Form Title",
+      type: "string",
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "bigCTA",
-      title: "Big CTA",
-      type: "reference",
-      to: { type: "bigCTA" },
+      name: "flashFormSubTitle",
+      title: "Flash Form SubTitle",
+      type: "string",
+    },
+    {
+      name: "canvasFormTitle",
+      title: "Canvas Form Title",
+      type: "string",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "cnavasFormSubTitle",
+      title: "Canvas Form SubTitle",
+      type: "string",
     },
   ],
   preview: {
     select: {
       title: "hiddenTitle",
+      media: "hero.backgroundImage.image",
     },
   },
 });

@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "cta",
-  title: "Call to Action",
+  name: "externalLink",
+  title: "External Link",
   type: "object",
   fields: [
     {
@@ -15,6 +15,30 @@ export default defineType({
       name: "link",
       title: "Link",
       type: "string",
+    },
+  ],
+});
+
+export const trippleCtas = defineType({
+  name: "trippleCtas",
+  title: "Tripple Ctas",
+  type: "object",
+  fields: [
+    {
+      name: "cta1",
+      title: "CTA 1",
+      type: "localLink",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "cta2",
+      title: "CTA 2",
+      type: "localLink",
+    },
+    {
+      name: "cta3",
+      title: "CTA 3",
+      type: "localLink",
     },
   ],
 });

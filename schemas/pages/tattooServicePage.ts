@@ -1,8 +1,8 @@
 import { defineType } from "sanity";
 
 export default defineType({
-  name: "servicePage",
-  title: "Service Page",
+  name: "tattooServicePage",
+  title: "TattooService Page",
   type: "document",
   fields: [
     {
@@ -14,18 +14,6 @@ export default defineType({
       name: "meta",
       title: "Meta",
       type: "seo",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "path",
-      title: "Path",
-      type: "localPath",
       validation: (Rule) => Rule.required(),
     },
     {
@@ -41,28 +29,31 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "features",
-      title: "Features",
-      type: "reference",
-      to: { type: "featuresBlock" },
+      name: "tarifText",
+      title: "Tarif Text",
+      type: "array",
+      of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "processes",
-      title: "Processes",
-      type: "reference",
-      to: { type: "processBlock" },
+      name: "pricePlans",
+      title: "Price Plans",
+      type: "array",
+      of: [{ type: "pricePlan" }],
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: "price",
-      title: "Price",
-      type: "number",
+      name: "multiDescriptions",
+      title: "Multi Descriptions",
+      type: "array",
+      of: [{ type: "description" }],
+      validation: (Rule) => Rule.required(),
     },
     {
-      name: "work",
-      title: "Work",
-      type: "reference",
-      to: { type: "workBlock" },
+      name: "collapsible",
+      title: "Collapsible",
+      type: "collapsible",
+      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

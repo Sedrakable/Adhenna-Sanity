@@ -1,69 +1,88 @@
-import blockContent from "./blockContent";
-import hero from "./reuse components/hero";
+import { hero, homeHero } from "./ref components/hero";
 import fancyText from "./reuse components/fancyText";
-import cta from "./reuse components/cta";
+import externalLink, { trippleCtas } from "./reuse components/cta";
 import homePage from "./pages/homePage";
-import quote from "./ref components/quote";
-import servicesBlock from "./blocks/servicesBlock";
-import feature from "./ref components/feature";
-import work from "./ref components/work";
-import footer from "./ref components/footer";
-import navbar from "./ref components/navbar";
-import valuesBlock from "./blocks/valuesBlock";
-import value from "./ref components/value";
-import aboutBlock from "./blocks/aboutBlock";
+import history from "./blocks/history";
+import review from "./reuse components/review";
+import bigCta from "./blocks/bigCTA";
+import {
+  canvasProject,
+  flashProject,
+  hennaProject,
+  tattooProject,
+} from "./ref components/project";
+import work from "./blocks/work";
+import workPage from "./pages/workPage";
+import pricePlan from "./reuse components/pricePlan";
+import description from "./reuse components/description";
+import collapsible from "./reuse components/collapsible";
 import customImage from "./reuse components/customImage";
+import video from "./reuse components/video";
 import language from "./reuse components/language";
-import servicePage from "./pages/servicePage";
-import featuresBlock from "./blocks/featuresBlock";
-import processBlock from "./blocks/processBlock";
-import process from "./ref components/process";
-import workBlock from "./blocks/workBlock";
-import aboutPage from "./pages/aboutPage";
-import contactPage from "./pages/contactPage";
-import formfields from "./reuse components/formfields";
-import socials from "./ref components/socials";
-import notFoundPage from "./pages/notFoundPage";
-import legalPage from "./pages/legalPage";
+import tattooServicePage from "./pages/tattooServicePage";
 import localLink from "./reuse components/localLink";
 import localPath from "./reuse components/localPath";
-import blogPage from "./pages/blogPage";
-import blogBlock from "./blocks/blogBlock";
-import articlePage from "./pages/articlePage";
+import workType, {
+  bodyParts,
+  year,
+  hennaColor,
+  flashStyle,
+} from "./reuse components/workType";
 import seo from "./reuse components/seo";
+import display from "./ref components/display";
+import portfolioPage from "./pages/portfolioPage";
+import testTattooServicePage from "./pages/testTattooServicePage";
+import hennaServicePage from "./pages/hennaServicePage";
+import onlineCoursePage from "./pages/onlineCoursePage";
+import inPersonCoursePage from "./pages/inPersonCoursePage";
+import boutiquePage from "./pages/boutiquePage";
+import product from "./ref components/product";
+import cartPage from "./pages/cartPage";
+import { cartForm, flashForm, contactForm } from "./ref components/forms";
+import contactPage from "./pages/contactPage";
 
 export const schemaTypes = [
   homePage,
-  servicePage,
-  aboutPage,
+  tattooServicePage,
+  hennaServicePage,
+  testTattooServicePage,
+  onlineCoursePage,
+  inPersonCoursePage,
+  portfolioPage,
+  boutiquePage,
   contactPage,
-  notFoundPage,
-  legalPage,
-  blogPage,
-  articlePage,
-  aboutBlock,
-  valuesBlock,
-  servicesBlock,
-  featuresBlock,
-  processBlock,
-  blogBlock,
-  workBlock,
-  process,
-  navbar,
-  value,
-  footer,
-  work,
-  feature,
-  socials,
-  quote,
-  formfields,
+  cartForm,
+  flashForm,
+  contactForm,
   hero,
+  homeHero,
+  workPage,
+  cartPage,
+  work,
+  flashProject,
+  tattooProject,
+  hennaProject,
+  canvasProject,
+  display,
+  product,
+  bigCta,
+  history,
+  review,
   fancyText,
-  cta,
+  externalLink,
+  trippleCtas,
   customImage,
+  video,
   language,
   localLink,
   localPath,
+  workType,
+  pricePlan,
+  description,
+  collapsible,
+  bodyParts,
+  year,
+  hennaColor,
+  flashStyle,
   seo,
-  blockContent,
 ];
