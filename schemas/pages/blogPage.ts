@@ -26,7 +26,7 @@ export default defineType({
       name: "blog",
       title: "Blog",
       type: "reference",
-      to: { type: "blogBlock" },
+      to: { type: "blog" },
       validation: (Rule) => Rule.required(),
     },
   ],

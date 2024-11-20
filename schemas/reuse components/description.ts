@@ -16,5 +16,10 @@ export default defineType({
       title: "Description",
       type: "text",
     },
+    {
+      name: "cta",
+      title: "Local Call to Action",
+      type: "localLink",
+    },
   ],
 });

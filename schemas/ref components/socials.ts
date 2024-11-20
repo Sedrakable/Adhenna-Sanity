@@ -1,4 +1,5 @@
 import { defineType } from "sanity";
+import { commonPreviewConfig } from "../previewConfig";
 
 export default defineType({
   name: "socials",
@@ -6,16 +7,12 @@ export default defineType({
   type: "document",
   fields: [
     {
-      name: "title",
-      title: "Title",
-      type: "string",
-    },
-    {
       name: "links",
       title: "Social Links",
       type: "array",
-      of: [{ type: "cta" }],
+      of: [{ type: "externalLink" }],
       validation: (Rule) => Rule.required(),
     },
   ],
+  preview: commonPreviewConfig("Socials"),
 });

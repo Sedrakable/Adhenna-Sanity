@@ -48,15 +48,19 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "facebookLink",
-      title: "Facebook Link",
-      type: "url",
-    },
-    {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+          styles: [
+            { title: "Normal", value: "normal" },
+            { title: "Heading", value: "h5" },
+            { title: "Quote", value: "blockquote" },
+          ],
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
   ],

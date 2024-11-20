@@ -32,7 +32,16 @@ export default defineType({
       name: "tarifText",
       title: "Tarif Text",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+          styles: [
+            { title: "Normal", value: "normal" },
+            { title: "Heading", value: "h5" },
+            { title: "Quote", value: "blockquote" },
+          ],
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
     {

@@ -22,16 +22,13 @@ export default defineType({
       type: "array",
       of: [
         {
-          type: "flashProject",
-        },
-        {
-          type: "tattooProject",
-        },
-        {
-          type: "hennaProject",
-        },
-        {
-          type: "canvasProject",
+          type: "reference",
+          to: [
+            { type: "flashProject" },
+            { type: "tattooProject" },
+            { type: "hennaProject" },
+            { type: "toilesProject" },
+          ],
         },
       ],
       validation: (Rule) => Rule.required(),

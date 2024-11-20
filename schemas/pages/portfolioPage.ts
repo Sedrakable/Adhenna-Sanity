@@ -42,28 +42,6 @@ export default defineType({
       to: { type: "history" },
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: "flashFormTitle",
-      title: "Flash Form Title",
-      type: "string",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "flashFormSubTitle",
-      title: "Flash Form SubTitle",
-      type: "string",
-    },
-    {
-      name: "canvasFormTitle",
-      title: "Canvas Form Title",
-      type: "string",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "cnavasFormSubTitle",
-      title: "Canvas Form SubTitle",
-      type: "string",
-    },
   ],
   preview: {
     select: {

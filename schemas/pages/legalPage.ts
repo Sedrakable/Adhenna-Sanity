@@ -21,6 +21,12 @@ export default defineType({
       name: "path",
       title: "Path",
       type: "localPath",
+      options: {
+        list: [
+          { title: "Terms & Conditions", value: "terms-and-conditions" },
+          { title: "Privacy Policy", value: "privacy-policy" },
+        ],
+      },
       validation: (Rule) => Rule.required(),
     },
 
@@ -28,7 +34,16 @@ export default defineType({
       name: "data",
       title: "Data",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+          styles: [
+            { title: "Normal", value: "normal" },
+            { title: "Heading", value: "h5" },
+            { title: "Quote", value: "blockquote" },
+          ],
+        },
+      ],
       validation: (Rule) => Rule.required(),
     },
   ],

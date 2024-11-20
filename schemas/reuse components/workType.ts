@@ -18,6 +18,15 @@ export const bodyParts = defineType({
   },
 });
 
+export const tattooColor = defineType({
+  name: "tattooColor",
+  title: "Tattoo Color",
+  type: "string",
+  options: {
+    list: ["black", "brown"],
+  },
+});
+
 export const hennaColor = defineType({
   name: "hennaColor",
   title: "Henna Color",
