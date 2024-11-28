@@ -3,8 +3,13 @@ import { defineType } from "sanity";
 export default defineType({
   name: "collapsible",
   title: "Collapsible",
-  type: "object",
+  type: "document",
   fields: [
+    {
+      name: "hiddenTitle",
+      title: "Hidden Title",
+      type: "string",
+    },
     {
       name: "title",
       title: "Title",
@@ -37,4 +42,9 @@ export default defineType({
       validation: (Rule) => Rule.required().min(1),
     },
   ],
+  preview: {
+    select: {
+      title: "hiddenTitle",
+    },
+  },
 });

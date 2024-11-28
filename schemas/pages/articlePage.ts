@@ -30,6 +30,11 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
+      name: "imageText",
+      title: "Image Text",
+      type: "string",
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",
@@ -45,6 +50,15 @@ export default defineType({
       name: "date",
       title: "Date",
       type: "date",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "type",
+      title: "Type",
+      type: "string",
+      options: {
+        list: ["tattoo", "henna", "jagua", "toile"],
+      },
       validation: (Rule) => Rule.required(),
     },
     {

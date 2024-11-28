@@ -53,6 +53,7 @@ import openingHours from "./ref components/openingHours";
 import socials from "./ref components/socials";
 import legalPage from "./pages/legalPage";
 import notFoundPage from "./pages/notFoundPage";
+import policiesPage from "./pages/policiesPage";
 
 export const schemaTypes = [
   homePage,
@@ -67,15 +68,16 @@ export const schemaTypes = [
   blogPage,
   articlePage,
   legalPage,
+  policiesPage,
   notFoundPage,
+  workPage,
+  cartPage,
   cartForm,
   flashForm,
   contactForm,
   approxForm,
   hero,
   homeHero,
-  workPage,
-  cartPage,
   work,
   flashProject,
   tattooProject,
