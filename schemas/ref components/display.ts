@@ -1,17 +1,43 @@
 import { defineType } from "sanity";
-import { heroFields } from "./hero";
 
 export default defineType({
   name: "display",
   title: "Display",
   type: "document",
   fields: [
-    ...heroFields,
+    {
+      name: "backgroundImage",
+      title: "Background Image",
+      type: "customImage",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "title",
+      title: "Title",
+      type: "fancyText",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "subTitle",
+      title: "Subtitle",
+      type: "string",
+    },
     {
       name: "hiddenTitle",
       title: "Hidden Title",
       type: "string",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "desc",
+      title: "Description",
+      type: "customParagraph",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "ctas",
+      title: "CTAs",
+      type: "trippleCtas",
     },
   ],
   preview: {

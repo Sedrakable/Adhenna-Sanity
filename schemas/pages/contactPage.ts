@@ -23,27 +23,17 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "notification",
-      title: "Notification",
-      type: "object",
-      fields: [
-        {
-          name: "title",
-          title: "Title",
-          type: "string",
-        },
-        {
-          name: "desc",
-          title: "Description",
-          type: "array",
-          of: [{ type: "block" }],
-        },
-      ],
+      name: "hero",
+      title: "Hero",
+      type: "hero",
+      validation: (Rule) => Rule.required(),
     },
+
     {
       name: "collapsible",
       title: "Collapsible",
-      type: "collapsible",
+      type: "reference",
+      to: { type: "collapsible" },
       validation: (Rule) => Rule.required(),
     },
   ],

@@ -37,8 +37,7 @@ export default defineType({
     {
       name: "desc",
       title: "Description",
-      type: "array",
-      of: [{ type: "block" }],
+      type: "customParagraph",
       validation: (Rule) => Rule.required(),
     },
     {

@@ -35,11 +35,18 @@ export default defineType({
       of: [{ type: "block" }],
       validation: (Rule) => Rule.required(),
     },
+    // {
+    //   name: "multiDescriptions",
+    //   title: "Multi Descriptions",
+    //   type: "array",
+    //   of: [{ type: "description" }],
+    //   validation: (Rule) => Rule.required(),
+    // },
     {
       name: "multiDescriptions",
       title: "Multi Descriptions",
       type: "array",
-      of: [{ type: "description" }],
+      of: [{ type: "customDescription" }],
       validation: (Rule) => Rule.required(),
     },
     {

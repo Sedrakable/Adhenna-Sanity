@@ -25,7 +25,8 @@ export default defineType({
     {
       name: "collapsible",
       title: "Collapsible",
-      type: "collapsible",
+      type: "reference",
+      to: { type: "collapsible" },
     },
   ],
   preview: {

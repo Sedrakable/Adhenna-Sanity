@@ -43,7 +43,7 @@ export default defineType({
     {
       name: "desc",
       title: "Description",
-      type: "text",
+      type: "customParagraph",
       validation: (Rule) => Rule.required(),
     },
     {

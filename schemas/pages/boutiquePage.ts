@@ -33,14 +33,12 @@ export default defineType({
       title: "Displays",
       type: "array",
       of: [{ type: "reference", to: { type: "display" } }],
-      validation: (Rule) => Rule.required(),
     },
     {
       name: "desc",
       title: "Description",
       type: "array",
       of: [{ type: "block" }],
-      validation: (Rule) => Rule.required(),
     },
     {
       name: "products",

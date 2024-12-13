@@ -31,17 +31,7 @@ export default defineType({
     {
       name: "tarifText",
       title: "Tarif Text",
-      type: "array",
-      of: [
-        {
-          type: "block",
-          styles: [
-            { title: "Normal", value: "normal" },
-            { title: "Heading", value: "h5" },
-            { title: "Quote", value: "blockquote" },
-          ],
-        },
-      ],
+      type: "customParagraph",
       validation: (Rule) => Rule.required(),
     },
     {
@@ -55,13 +45,14 @@ export default defineType({
       name: "multiDescriptions",
       title: "Multi Descriptions",
       type: "array",
-      of: [{ type: "description" }],
+      of: [{ type: "customDescription" }],
       validation: (Rule) => Rule.required(),
     },
     {
       name: "collapsible",
       title: "Collapsible",
-      type: "collapsible",
+      type: "reference",
+      to: { type: "collapsible" },
       validation: (Rule) => Rule.required(),
     },
   ],

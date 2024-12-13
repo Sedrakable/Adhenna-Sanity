@@ -3,7 +3,7 @@ import { defineType } from "sanity";
 export default defineType({
   name: "pricePlan",
   title: "Price Plan",
-  type: "document",
+  type: "object",
   fields: [
     {
       name: "image",
@@ -25,7 +25,7 @@ export default defineType({
     {
       name: "desc",
       title: "Description",
-      type: "text",
+      type: "customParagraph",
     },
     {
       name: "features",

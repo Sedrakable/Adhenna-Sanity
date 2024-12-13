@@ -46,7 +46,7 @@ export default defineType({
       name: "multiDescriptions",
       title: "Multi Descriptions",
       type: "array",
-      of: [{ type: "description" }],
+      of: [{ type: "customDescription" }],
       validation: (Rule) => Rule.required(),
     },
   ],

@@ -33,7 +33,7 @@ export default defineType({
             {
               name: "answer",
               title: "Answer",
-              type: "text",
+              type: "customParagraph",
               validation: (Rule) => Rule.required(),
             },
           ],

@@ -14,7 +14,7 @@ import {
 import work from "./blocks/work";
 import workPage from "./pages/workPage";
 import pricePlan from "./reuse components/pricePlan";
-import description from "./reuse components/description";
+import description, { customDescription } from "./reuse components/description";
 import collapsible from "./reuse components/collapsible";
 import customImage from "./reuse components/customImage";
 import video from "./reuse components/video";
@@ -54,6 +54,7 @@ import socials from "./ref components/socials";
 import legalPage from "./pages/legalPage";
 import notFoundPage from "./pages/notFoundPage";
 import policiesPage from "./pages/policiesPage";
+import customParagraph from "./reuse components/customParagraph";
 
 export const schemaTypes = [
   homePage,
@@ -93,6 +94,7 @@ export const schemaTypes = [
   externalLink,
   trippleCtas,
   customImage,
+  customParagraph,
   video,
   language,
   localLink,
@@ -100,6 +102,7 @@ export const schemaTypes = [
   workType,
   pricePlan,
   description,
+  customDescription,
   collapsible,
   bodyParts,
   tattooColor,

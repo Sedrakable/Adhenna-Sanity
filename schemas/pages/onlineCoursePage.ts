@@ -51,7 +51,6 @@ export default defineType({
       title: "Features",
       type: "array",
       of: [{ type: "display" }],
-      validation: (Rule) => Rule.required(),
     },
   ],
   preview: {

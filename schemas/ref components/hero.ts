@@ -1,5 +1,4 @@
 import { defineType, defineField } from "sanity";
-import { trippleCtas } from "../reuse components/cta";
 
 export const heroFields = [
   defineField({
