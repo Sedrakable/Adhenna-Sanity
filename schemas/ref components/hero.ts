@@ -2,6 +2,18 @@ import { defineType, defineField } from "sanity";
 
 export const heroFields = [
   defineField({
+    name: "hiddenTitle",
+    title: "Hidden Title",
+    type: "string",
+    validation: (Rule) => Rule.required(),
+  }),
+  defineField({
+    name: "lang",
+    title: "Language",
+    type: "language",
+    validation: (Rule) => Rule.required(),
+  }),
+  defineField({
     name: "backgroundImage",
     title: "Background Image",
     type: "customImage",
@@ -50,12 +62,6 @@ export const homeHero = defineType({
   type: "document",
   fields: [
     ...heroFields,
-    {
-      name: "hiddenTitle",
-      title: "Hidden Title",
-      type: "string",
-      validation: (Rule) => Rule.required(),
-    },
     {
       name: "foregroundImage",
       title: "Foreground Image",

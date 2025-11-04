@@ -74,6 +74,44 @@ export default defineType({
             { title: "Quote", value: "blockquote" },
           ],
         },
+        {
+          type: "image",
+          options: {
+            hotspot: true, // Enables hotspot for smart cropping
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative text",
+              description: "Important for SEO and accessibility",
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: "caption",
+              type: "string",
+              title: "Caption",
+              description: "Optional caption text below the image",
+            },
+            {
+              name: "size",
+              type: "string",
+              title: "Image Size",
+              description: "Choose how wide the image should be",
+              options: {
+                list: [
+                  { title: "Small (30%)", value: "small" },
+                  { title: "Medium (50%)", value: "medium" },
+                  { title: "Large (75%)", value: "large" },
+                  { title: "Full Width (100%)", value: "full" },
+                ],
+                layout: "radio", // or "dropdown"
+              },
+              initialValue: "full",
+            },
+          ],
+        },
+        // NEW: Add image block support
       ],
       validation: (Rule) => Rule.required(),
     },

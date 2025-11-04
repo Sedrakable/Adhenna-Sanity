@@ -11,6 +11,12 @@ export default defineType({
       type: "string",
     },
     {
+      name: "lang",
+      title: "Language",
+      type: "language",
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: "content",
       title: "Content",
       type: "object",

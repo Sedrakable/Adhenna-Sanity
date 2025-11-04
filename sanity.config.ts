@@ -7,8 +7,8 @@ export default defineConfig({
   name: "default",
   title: "Adhenna",
 
-  projectId: "m478gwus",
-  dataset: "production",
+  projectId: process.env.SANITY_PROJECT_ID || "m478gwus",
+  dataset: process.env.SANITY_DATASET || "production",
 
   plugins: [structureTool(), visionTool()],
 

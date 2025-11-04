@@ -6,6 +6,18 @@ export default defineType({
   type: "document",
   fields: [
     {
+      name: "hiddenTitle",
+      title: "Hidden Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "lang",
+      title: "Language",
+      type: "language",
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: "backgroundImage",
       title: "Background Image",
       type: "customImage",
@@ -22,12 +34,7 @@ export default defineType({
       title: "Subtitle",
       type: "string",
     },
-    {
-      name: "hiddenTitle",
-      title: "Hidden Title",
-      type: "string",
-      validation: (Rule) => Rule.required(),
-    },
+
     {
       name: "desc",
       title: "Description",

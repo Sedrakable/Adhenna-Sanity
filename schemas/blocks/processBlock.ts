@@ -11,6 +11,12 @@ export default defineType({
       type: "string",
     },
     {
+      name: "lang",
+      title: "Language",
+      type: "language",
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: "processes",
       title: "Processes",
       type: "array",

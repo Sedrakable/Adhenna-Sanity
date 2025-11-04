@@ -12,6 +12,12 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
+      name: "lang",
+      title: "Language",
+      type: "language",
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: "title",
       title: "Title",
       type: "string",
