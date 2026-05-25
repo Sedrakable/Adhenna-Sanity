@@ -29,12 +29,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "displays",
-      title: "Displays",
-      type: "array",
-      of: [{ type: "reference", to: { type: "display" } }],
-    },
-    {
       name: "desc",
       title: "Description",
       type: "array",

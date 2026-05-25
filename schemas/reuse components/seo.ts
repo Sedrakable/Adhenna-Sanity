@@ -17,12 +17,6 @@ export default defineType({
       type: "text",
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: "metaKeywords",
-      title: "Meta Keywords",
-      type: "array",
-      of: [{ type: "string" }],
-    },
   ],
   validation: (Rule) => Rule.required(),
 });

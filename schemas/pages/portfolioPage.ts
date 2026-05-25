@@ -35,13 +35,6 @@ export default defineType({
       of: [{ type: "reference", to: { type: "workPage" } }],
       validation: (Rule) => Rule.required(),
     },
-    {
-      name: "history",
-      title: "History",
-      type: "reference",
-      to: { type: "history" },
-      validation: (Rule) => Rule.required(),
-    },
   ],
   preview: {
     select: {

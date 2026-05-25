@@ -37,6 +37,13 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     },
     {
+      name: "originalPrice",
+      title: "Original Price",
+      type: "string",
+      description:
+        "Optional compare-at price shown crossed out when the product is discounted.",
+    },
+    {
       name: "quantityDesc",
       title: "Quantity Description",
       type: "string",
